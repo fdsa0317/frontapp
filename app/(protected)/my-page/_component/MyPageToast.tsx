@@ -7,7 +7,7 @@ export default function MyPageToast({message}: MyPageToastProps) {
     if (!message) return null;
 
     return (
-        <div className="fixed left-1/2 top-7.75 z-50 flex h-16.5 -translate-x-1/2 items-center gap-1 bg-ink-900 px-6">
+        <div className="fixed left-1/2 top-24 z-110 flex h-16.5 -translate-x-1/2 items-center gap-1 bg-ink-900 px-6">
             <span className="text-[22px] font-bold leading-normal text-mint">✓</span>
             <span className="text-xl font-semibold leading-normal text-white">{message}</span>
         </div>

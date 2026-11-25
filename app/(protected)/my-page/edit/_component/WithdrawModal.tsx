@@ -26,17 +26,17 @@ export default function WithdrawModal({onClose}: WithdrawModalProps) {
     }
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink-900/50" onClick={onClose}>
-            <div className="w-156 bg-white p-12" onClick={(e) => e.stopPropagation()}>
-                <h2 className="text-[34px] font-bold leading-[1.4] text-ink-900">사장님 어디가세요?</h2>
-                <p className="mt-3.5 text-[19px] leading-[1.6] text-ink-800">
+        <div className="fixed inset-0 z-110 flex items-center justify-center bg-ink-900/50" onClick={onClose}>
+            <div className="max-h-[calc(100vh-48px)] w-130 overflow-y-auto bg-white p-9" onClick={(e) => e.stopPropagation()}>
+                <h2 className="text-[28px] font-bold leading-[1.4] text-ink-900">사장님 어디가세요?</h2>
+                <p className="mt-3.5 text-[17px] leading-[1.6] text-ink-800">
                     탈퇴하면 아래 정보가 모두 지워지고 되돌릴 수 없어요. 작성한 게시글과 댓글은 ‘탈퇴한 회원’으로 남아요.
                 </p>
 
-                <div className="mt-9.75 h-[1.2px] bg-line-gray" />
-                <ul className="flex flex-col gap-4.75 py-5">
+                <div className="mt-6 h-[1.2px] bg-line-gray" />
+                <ul className="flex flex-col gap-3 py-5">
                     {removedItems.map((item) => (
-                        <li key={item} className="flex items-center gap-4 text-[19px] leading-[1.6]">
+                        <li key={item} className="flex items-center gap-4 text-[17px] leading-[1.6]">
                             <span className="font-semibold text-danger">—</span>
                             <span className="text-ink-900">{item}</span>
                         </li>
@@ -44,13 +44,13 @@ export default function WithdrawModal({onClose}: WithdrawModalProps) {
                 </ul>
                 <div className="h-[1.2px] bg-line-gray" />
 
-                <label className="mt-8 block">
+                <label className="mt-6 block">
                     <p className="text-xl font-semibold leading-normal text-ink-900">비밀번호 확인</p>
                     <input
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        className="mt-4 h-15.25 w-full rounded-xl border-[1.2px] border-line-strong bg-white px-4.75 text-[22px] text-ink-900 focus:border-sub focus:outline-none"
+                        className="mt-4 h-13 w-full rounded-xl border-[1.2px] border-line-strong bg-white px-4.75 text-[22px] text-ink-900 focus:border-sub focus:outline-none"
                     />
                 </label>
 
@@ -64,7 +64,7 @@ export default function WithdrawModal({onClose}: WithdrawModalProps) {
                     <span className="ml-1 text-xl leading-[1.6] text-ink-900">안내 내용을 확인했어요</span>
                 </label>
 
-                <div className="mt-14 flex justify-end gap-2.5">
+                <div className="mt-9 flex justify-end gap-2.5">
                     <button
                         type="button"
                         onClick={onClose}
